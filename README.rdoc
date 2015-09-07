@@ -1,28 +1,20 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This rails 4.0.3 application makes use of Comfy CMS to provide a lightweight facility for users to maintain their own page content. For an example of the application running on heroku take a look at http:/www.ecogardeners.org.
 
-Things you may want to cover:
+I wrote the application as a one-off for the organic gardening group and even though almost all of the application is generic it does have a few specific headings and icons (eg the favicon the layout/application.erb navbar and the footer). 
 
-* Ruby version
+The authenication to gain access to edit pages is implemented with a User model which has_secure_password. The /admin root is the one to use to login to the CMS. For my purposes I'm not likely to have many new admin users so I just used the console to add users rather than having a form which only an authenticated set of super users could access.
 
-* System dependencies
+Running rake db:migrate will create the comfy/cms tables and the user table.
 
-* Configuration
+Then in a rails console:
+user = User.new(:email => "user@name.com", :password => 'password', :password_confirmation => 'password')
+user.save
+ 
+Next run the rails server, go to the /admin path and define the Site and Pages and edit layout/application.erb as required.
 
-* Database creation
+== Flickr
+I wanted it to be easy to add an album of flickr photos to a page. Liquid tags like {{ cms:helper:list_image_tags:ecog_2013 }} embedded within a page call the list_image_tags helper which, in this case, will add all the images from the "ecog 2013" album. The flickr credentials are read in by the flickr.rb initialiser via enviroment variables managed by the handy "figaro" gem. 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
