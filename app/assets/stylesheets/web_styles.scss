@@ -1,0 +1,118 @@
+
+body {
+    padding-top: 60px;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #F4F4F4;
+    background-color:green;
+    background-image: radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
+    background-size: cover;
+}
+
+.navbar-brand {
+  margin-top: -20px;
+}
+
+nav.navbar-default {
+  background-color: transparent;
+  border: 0;  
+}
+
+
+ul.dropdown-menu{
+  background: rgba(25, 54, 25, .9);
+  li > a {
+    color: #fff;
+  }
+}
+
+.navbar-default #navbar .navbar-nav {
+  .active a{
+    background: rgba(25, 54, 25, .9);
+  }
+  li a:focus, li a:hover {
+    background: rgba(25, 54, 25, .9);
+    color: #ddf;
+  }
+}
+
+nav a {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  font-size: 18px;
+}
+
+nav .navbar-toggle {
+  margin: 13px 15px 13px 0;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
+nav.navbar {
+  background: rgba(0, 25, 0, .95);
+  .shrink {
+    min-height: 35px;
+    transition: height .5s;
+  }
+}
+
+nav.shrink a {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 15px;
+  transition: padding .5s;
+}
+
+nav.shrink .navbar-brand {
+  font-size: 25px;
+}
+
+nav.shrink .navbar-toggle {
+  padding: 4px 5px;
+  margin: 8px 15px 8px 0;
+  transition: padding .5s;
+  transition: margin .5s;
+}
+
+div.jumbotron {
+  background-color: transparent !important;
+  form {
+    padding: 10px;
+    background: rgba(255, 255, 255, .5);
+    color: #111;
+  }
+}
+
+div.photos img{
+  height: 240px;
+  border: 2px solid #7F7F7F;
+  float:left;
+  margin: 10px;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background: rgba(0, 25, 0, .95);
+  text-align: center;
+  padding-top: 10px;
+}
+
+
