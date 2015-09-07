@@ -49,3 +49,4 @@ gem 'comfortable_mexican_sofa'
 gem 'flickraw_objects'
 
 gem 'rails_12factor', group: :production
+gem 'puma'
